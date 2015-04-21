@@ -18,11 +18,6 @@ Creating a new profile:
     $ SAML username: john.doe@example.org # Enter your SAML username
     # answer the questions
 
-Deleting a profile:
-
-.. code-block:: bash
-
-    $ mai delete myteam
     
 List profile(s):
 
