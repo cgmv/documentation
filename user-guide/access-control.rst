@@ -373,6 +373,11 @@ token if you have the password of the resource owner (yourself in this case):
     $ curl -X POST -u my-client-id:my-client-secret -d @request.json \
         "https://auth.example.com/oauth2/access_token?realm=services"
 
+Please make sure you JSON decode your passwords or they could fail during usage. Use jq for that:
+   $ json_decode () {
+      jq -r ."password"
+   }
+
 You will get back an access token that will result in the following tokeninfo if you check it:
 
 .. code-block:: json
